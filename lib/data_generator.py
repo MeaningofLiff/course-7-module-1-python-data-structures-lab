@@ -1,8 +1,6 @@
-# This module contains functions to lazily generate student data.
+# lib/data_generator.py
 
-def student_generator(student_list, major):
-    """
-    Generate student records filtered by major lazily for memory efficiency
-    using a Python generator.
-    """
-    pass
+def students_by_id(students):
+    """Return a dict mapping student_id -> (name, major)."""
+    return {sid: (name, major) for sid, name, major in students}
+ 
